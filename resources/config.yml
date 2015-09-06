@@ -1,0 +1,8 @@
+# Will EasyKeep be enabled for people who join without them enabling it?
+EnableOnJoin: true
+
+# Will EasyKeep be disabled for a player when he/she leaves
+DisableOnLeave: true
+
+# Will easyKeep be enabled for the entire server on startup?
+AllEnableStart: true
