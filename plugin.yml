@@ -1,20 +1,21 @@
 name: EasyKeep
+main: EasyKeep\Main
 version: 1.0.0
 api: [1.12.0]
-main: EasyKeep\Main
 commands:
   ek:
-    usage: /ek <on | off>
-    description: Enabled or disables EasyKeep
-    permission: easykeep.enable
+    usage: /ek <on | off> [all]
+    description: Enabled/Disabled EasyKeep
+    permission: ek.toggle
 permissions:
-  easykeep:
+  ek:
     default: false
-    description: Gives the player all access to EasyKeep
+    description: Allows the user to use all of the EasyKeep features
     children:
-      easykeep.enable:
-        default: op
-        description: Allows the player to disable/enable EasyKeep
-      easykeep.keep:
+      ek.toggle:
         default: true
-        description: Allows the player to keep their inventory when they die
+        description: Allows the user to toggle EasyKeep for themselves
+        children:
+          ek.toggle.all:
+            default: op
+            description: Allows the player to toggle EasyKeep for the entire server
